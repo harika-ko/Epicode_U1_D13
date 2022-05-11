@@ -114,6 +114,15 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                  Create a method "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
               */
 
+        function getTasksAsArray() {
+            let ulList = document.getElementById("myTaskList")
+            let taskArray = []
+            for (let child of ulList.children) {
+                taskArray.push(child.innerHTML)
+            }
+            console.log(taskArray)
+        }
+
         /* EXERCISE 9:
                  Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
                  onchange event listener ad applies it as background to every list item
